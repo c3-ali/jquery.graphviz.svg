@@ -232,7 +232,7 @@
     }
 
     // remove namespace from a[xlink:title]
-    $el.children('a').filter(function () { return $(this).attr('xlink:title') }).each(function () {
+    $el.children().children('a').filter(function () { return $(this).attr('xlink:title') }).each(function () {
       var $a = $(this)
       $a.attr('title', $a.attr('xlink:title'))
       $a.removeAttr('xlink:title')
